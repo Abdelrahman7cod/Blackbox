@@ -1,0 +1,237 @@
+<style>
+    @charset "UTF-8";
+    @import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700");
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Merriweather, serif;
+    }
+    
+    .wrapper {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    label,
+    main {
+      color: var(--text, black);
+    }
+    
+    .theme-switch__input:checked ~ main,
+    .theme-switch__input:checked ~ label {
+      --text: white;
+    }
+    
+    main {
+      --gradDark: hsl(144, 100%, 89%);
+      --gradLight: hsl(42, 94%, 76%);
+      background: linear-gradient(to bottom, var(--gradDark), var(--gradLight));
+      padding: 120px 40px 40px 40px;
+      min-height: 100vh;
+      text-align: center;
+    }
+    
+    .theme-switch__input:checked ~ main {
+      --gradDark: hsl(198, 44%, 11%);
+      --gradLight: hsl(198, 39%, 29%);
+    }
+    
+    .theme-switch__input:checked ~ .theme-switch__label {
+      background-color: lightSlateGray;
+    }
+    
+    .theme-switch__input,
+    .theme-switch__label {
+      position: absolute;
+      z-index: 1;
+    }
+    
+    .theme-switch__input {
+      opacity: 0;
+    }
+    .theme-switch__input:hover + .theme-switch__label, .theme-switch__input:focus + .theme-switch__label {
+      background-color: lightSlateGray;
+    }
+    .theme-switch__input:hover + .theme-switch__label span::after, .theme-switch__input:focus + .theme-switch__label span::after {
+      background-color: #d4ebf2;
+    }
+    
+    .theme-switch__label {
+      padding: 20px;
+      margin: 60px;
+      transition: background-color 200ms ease-in-out;
+      width: 120px;
+      height: 50px;
+      border-radius: 50px;
+      text-align: center;
+      background-color: slateGray;
+      box-shadow: -4px 4px 15px inset rgba(0, 0, 0, 0.4);
+    }
+    .theme-switch__label span {
+      position: absolute;
+      bottom: calc(100% + 10px);
+      left: 0;
+      width: 100%;
+    }
+    .theme-switch__label::before, .theme-switch__label::after {
+      font-size: 2rem;
+      position: absolute;
+      transform: translate3d(0, -50%, 0);
+      top: 50%;
+    }
+    .theme-switch__label::before {
+      content: "☼";
+      right: 100%;
+      margin-right: 10px;
+      color: orange;
+    }
+    .theme-switch__label::after {
+      content: "☾";
+      left: 100%;
+      margin-left: 10px;
+      color: lightSlateGray;
+    }
+    
+    .theme-switch__label span::after {
+      position: absolute;
+      top: calc(100% + 15px);
+      left: 5px;
+      width: 40px;
+      height: 40px;
+      content: "";
+      border-radius: 50%;
+      background-color: lightBlue;
+      transition: transform 200ms, background-color 200ms;
+      box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.4);
+    }
+    
+    .theme-switch__input:checked ~ .theme-switch__label span::after {
+      transform: translate3d(70px, 0, 0);
+    }
+    
+    
+    .theme-switch__input:checked ~ .theme-switch__label::before {
+      color: lightSlateGray;
+    }
+    .theme-switch__input:checked ~ .theme-switch__label::after {
+      color: turquoise;
+    }
+    </style>
+    
+    <div class="page">
+        <!--Theme switch-->
+        <input type="checkbox" id="themeSwitch" name="theme-switch" class="theme-switch__input" />
+        <label for="themeSwitch" class="theme-switch__label">
+          <span></span>
+        </label>
+        
+        <!--Main page content-->
+     
+
+        
+           <style>
+           
+           img {
+            border-style: solid;
+                    text-align: center;
+                    background: rgb(114, 59, 157);
+                    border-radius: 20px;
+               }
+           
+        </style>
+
+
+<style>
+   
+    a {
+        border-style: solid;
+            text-align: center;
+            background: rgb(130, 64, 165);
+            border-radius: 20px;
+        }
+
+
+
+    
+</style>
+
+
+
+
+
+<main>
+    <div class="wrapper">
+    <h1><Center>OOP</Center></h1>
+    <body>
+
+
+        <a href="file:///C:/Users/zbook/Documents/My%20Website/OOP/Intro%20to%20OOP.Html" ><h2 style="background-color: gray;">Intro</h2></a>
+        <br></br>
+        
+        <a href="file:///C:/Users/zbook/Documents/My%20Website/OOP/Classes%20and%20Objects.Html"><h2 style="background-color: gray;">Classes and Objects</h2></a>
+
+
+     
+        <a href="file:///C:/Users/zbook/Documents/My%20Website/OOP/Constructor.html"><h2 style="background-color: gray;">Constructor</h2></a>
+
+        <a href="file:///C:/Users/zbook/Documents/My%20Website/OOP/Method%20Overloading.html"><h2 style="background-color: gray;">Method Overloading</h2></a>
+
+        <a href="file:///C:/Users/zbook/Documents/My%20Website/OOP/Inheritance%C2%A0.html"><h2 style="background-color: gray;">Inheritance</h2></a>
+
+        <a href="file:///C:/Users/zbook/Documents/My%20Website/OOP/Abstract.html"><h2 style="background-color: gray;">Abstract</h2></a>
+
+        <a href="file:///C:/Users/zbook/Documents/My%20Website/OOP/Property.html"><h2 style="background-color: gray;">Property</h2></a>
+
+        <a href="file:///C:/Users/zbook/Documents/My%20Website/OOP/Polymorphism.html"><h2 style="background-color: gray;">Polymorphism</h2></a>
+
+        <a href="file:///C:/Users/zbook/Documents/My%20Website/OOP/Encapsulation.html"><h2 style="background-color: gray;">Encapsulation</h2></a>
+
+        <a href="file:///C:/Users/zbook/Documents/My%20Website/OOP/Operator%20Overloading.html"><h2 style="background-color: gray;">Operator Overloading</h2></a>
+
+        <a href="file:///C:/Users/zbook/Documents/My%20Website/OOP/struct.html"><h2 style="background-color: gray;">struct</h2></a>
+
+        <a href="file:///C:/Users/zbook/Documents/My%20Website/OOP/Indexers.html"><h2 style="background-color: gray;">Indexers</h2></a>
+
+        <a href="file:///C:/Users/zbook/Documents/My%20Website/OOP/Param%20Arrays.html"><h2 style="background-color: gray;">Param Arrays</h2></a>
+
+        <a href="file:///C:/Users/zbook/Documents/My%20Website/OOP/Jagged%20array.html"><h2 style="background-color: gray;">Jagged array</h2></a>
+
+        <a href=""><h2 style="background-color: gray;"></h2></a>
+
+        <a href=""><h2 style="background-color: gray;"></h2></a>
+
+
+      <br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

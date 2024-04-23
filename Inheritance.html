@@ -1,0 +1,379 @@
+<style>
+
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Merriweather, serif;
+}
+
+.wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+label,
+main {
+  color: var(--text, black);
+}
+
+.theme-switch__input:checked ~ main,
+.theme-switch__input:checked ~ label {
+  --text: white;
+}
+
+main {
+  --gradDark: hsl(144, 100%, 89%);
+  --gradLight: hsl(42, 94%, 76%);
+  background: linear-gradient(to bottom, var(--gradDark), var(--gradLight));
+  padding: 120px 40px 40px 40px;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.theme-switch__input:checked ~ main {
+  --gradDark: hsl(198, 44%, 11%);
+  --gradLight: hsl(198, 39%, 29%);
+}
+
+.theme-switch__input:checked ~ .theme-switch__label {
+  background-color: lightSlateGray;
+}
+
+.theme-switch__input,
+.theme-switch__label {
+  position: absolute;
+  z-index: 1;
+}
+
+.theme-switch__input {
+  opacity: 0;
+}
+.theme-switch__input:hover + .theme-switch__label, .theme-switch__input:focus + .theme-switch__label {
+  background-color: lightSlateGray;
+}
+.theme-switch__input:hover + .theme-switch__label span::after, .theme-switch__input:focus + .theme-switch__label span::after {
+  background-color: #d4ebf2;
+}
+
+.theme-switch__label {
+  padding: 20px;
+  margin: 60px;
+  transition: background-color 200ms ease-in-out;
+  width: 120px;
+  height: 50px;
+  border-radius: 50px;
+  text-align: center;
+  background-color: slateGray;
+  box-shadow: -4px 4px 15px inset rgba(0, 0, 0, 0.4);
+}
+.theme-switch__label span {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 0;
+  width: 100%;
+}
+.theme-switch__label::before, .theme-switch__label::after {
+  font-size: 2rem;
+  position: absolute;
+  transform: translate3d(0, -50%, 0);
+  top: 50%;
+}
+.theme-switch__label::before {
+  content: "☼";
+  right: 100%;
+  margin-right: 10px;
+  color: orange;
+}
+.theme-switch__label::after {
+  content: "☾";
+  left: 100%;
+  margin-left: 10px;
+  color: lightSlateGray;
+}
+
+.theme-switch__label span::after {
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 5px;
+  width: 40px;
+  height: 40px;
+  content: "";
+  border-radius: 50%;
+  background-color: lightBlue;
+  transition: transform 200ms, background-color 200ms;
+  box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.theme-switch__input:checked ~ .theme-switch__label span::after {
+  transform: translate3d(70px, 0, 0);
+}
+
+
+.theme-switch__input:checked ~ .theme-switch__label::before {
+  color: lightSlateGray;
+}
+.theme-switch__input:checked ~ .theme-switch__label::after {
+  color: turquoise;
+}
+
+
+</style>
+
+
+
+<div class="page">
+    <!--Theme switch-->
+    <input type="checkbox" id="themeSwitch" name="theme-switch" class="theme-switch__input" />
+    <label for="themeSwitch" class="theme-switch__label">
+      <span></span>
+    </label>
+    
+    <!--Main page content-->
+ 
+
+
+
+
+   
+    
+       <style>
+       
+       img {
+        border-style: solid;
+                text-align: center;
+                background: rgb(114, 59, 157);
+                border-radius: 20px;
+           }
+       
+    </style>
+
+
+
+
+<style>
+
+    p {
+        Text-align:left;
+    }
+
+    pre {
+        Text-align:left;
+    }
+
+    pre {
+          border-style: solid;
+          border-width: 8x;
+          box-sizing: border-box;
+          
+      }
+
+
+</style>
+
+
+
+
+
+
+<main>
+    <div class="wrapper">
+    <h1 style="color: rgb(124, 168, 168);"><center>Inheritance</Center></h1>
+    <body>
+<p>
+        <mark left>Inheritance</mark> is a fundamental concept in object-oriented programming that allows us to define a new class based on an existing class.
+
+        <br></br>
+        
+        - <strong left>Derived Class (child)</strong>: the class that inherits from another class
+        <br></br>
+        
+     
+        - <strong left>Base Class(parent)</strong>: the class being inherited from
+
+        <br></br>
+
+        <p></p>
+<pre>
+  <code>
+    
+    class Vehicle  // base class (parent)
+{
+  public string brand = "Ford";  // Vehicle field
+  public void honk()             // Vehicle method
+  {
+    Console.WriteLine("Tuut, tuut!");
+  }
+}
+
+class Car : Vehicle  // derived class (child)
+{
+  public string modelName = "Mustang";  // Car field
+}
+
+class Program
+{
+  static void Main(string[] args)
+  {
+    // Create a myCar object
+    Car myCar = new Car();
+
+    // Call the honk() method (From the Vehicle class) on the myCar object
+    myCar.honk();
+
+    // Display the value of the brand field (from the Vehicle class) and the value of the modelName from the Car class
+    Console.WriteLine(myCar.brand + " " + myCar.modelName);
+  }
+}
+
+
+  </code>
+</pre>
+
+
+<p>but keep in mind that it transfers the information classes this inheritance process takes place between private he inherits from him and can inherit everything except a specific class more than
+,what we can do for that?
+ easy don’t warry
+      we can change member of the private class to  protected to be seen in the another class
+      <br></p>
+      Ex:
+</p>
+
+<p></p>
+<pre>
+  <code>
+    public class humen
+    {
+      protected int age;
+      protected string name;
+    
+      public void print()
+      {
+    Console.WriteLine("Menna");
+      }
+    }
+    public  class student : humen
+    {
+      int id;
+    }
+    
+    
+    
+    class Program {
+      public static void Main (string[] args) 
+      {
+        
+     student s1 = new student();
+        s1.print();
+        
+      }
+    }
+  </code>
+</pre>
+
+<br></br>
+
+
+<p>The "base" keyword:-
+    Indicates that the base class must be used and allows access to its methods, constructors and member variables.</p>
+
+    <p></p>
+    <pre>
+      <code>
+        blic class person
+        {
+          protected int age;
+          protected string name;
+        
+          public void print()
+          {
+        Console.WriteLine("BlackBox");
+          }
+        }
+        public  class student : person
+        {
+          int id;
+          
+          public new void print ()
+          {
+            age = 20;
+            base.age = 30;
+            base.print();
+            Console.WriteLine("Menna" + age);
+            }
+        }
+        
+        
+        
+        class Program {
+          public static void Main (string[] args) 
+          {
+            
+         student s1 = new student();
+            s1.print();
+            
+          }
+        }
+      </code>
+    </pre>
+
+
+
+
+
+
+
+
+    </p>
+    </body>
+    <p></p>
+    </div>
+  </main>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>

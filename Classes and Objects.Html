@@ -1,0 +1,311 @@
+<style>
+
+
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Merriweather, serif;
+}
+
+.wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+label,
+main {
+  color: var(--text, black);
+}
+
+.theme-switch__input:checked ~ main,
+.theme-switch__input:checked ~ label {
+  --text: white;
+}
+
+main {
+  --gradDark: hsl(144, 100%, 89%);
+  --gradLight: hsl(42, 94%, 76%);
+  background: linear-gradient(to bottom, var(--gradDark), var(--gradLight));
+  padding: 120px 40px 40px 40px;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.theme-switch__input:checked ~ main {
+  --gradDark: hsl(198, 44%, 11%);
+  --gradLight: hsl(198, 39%, 29%);
+}
+
+.theme-switch__input:checked ~ .theme-switch__label {
+  background-color: lightSlateGray;
+}
+
+.theme-switch__input,
+.theme-switch__label {
+  position: absolute;
+  z-index: 1;
+}
+
+.theme-switch__input {
+  opacity: 0;
+}
+.theme-switch__input:hover + .theme-switch__label, .theme-switch__input:focus + .theme-switch__label {
+  background-color: lightSlateGray;
+}
+.theme-switch__input:hover + .theme-switch__label span::after, .theme-switch__input:focus + .theme-switch__label span::after {
+  background-color: #d4ebf2;
+}
+
+.theme-switch__label {
+  padding: 20px;
+  margin: 60px;
+  transition: background-color 200ms ease-in-out;
+  width: 120px;
+  height: 50px;
+  border-radius: 50px;
+  text-align: center;
+  background-color: slateGray;
+  box-shadow: -4px 4px 15px inset rgba(0, 0, 0, 0.4);
+}
+.theme-switch__label span {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 0;
+  width: 100%;
+}
+.theme-switch__label::before, .theme-switch__label::after {
+  font-size: 2rem;
+  position: absolute;
+  transform: translate3d(0, -50%, 0);
+  top: 50%;
+}
+.theme-switch__label::before {
+  content: "☼";
+  right: 100%;
+  margin-right: 10px;
+  color: orange;
+}
+.theme-switch__label::after {
+  content: "☾";
+  left: 100%;
+  margin-left: 10px;
+  color: lightSlateGray;
+}
+
+.theme-switch__label span::after {
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 5px;
+  width: 40px;
+  height: 40px;
+  content: "";
+  border-radius: 50%;
+  background-color: lightBlue;
+  transition: transform 200ms, background-color 200ms;
+  box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.theme-switch__input:checked ~ .theme-switch__label span::after {
+  transform: translate3d(70px, 0, 0);
+}
+
+
+.theme-switch__input:checked ~ .theme-switch__label::before {
+  color: lightSlateGray;
+}
+.theme-switch__input:checked ~ .theme-switch__label::after {
+  color: turquoise;
+}
+
+
+
+</style>
+
+<style>
+
+  p {
+      Text-align:left;
+  }
+
+  mark {
+      Text-align:left;
+  }
+
+
+  pre {
+      Text-align:left;
+  }
+</style>
+
+
+<style>
+   
+  pre {
+          border-style: solid;
+          border-width: 8px;
+      }
+  
+</style>
+
+
+<div class="page">
+  <!--Theme switch-->
+  <input type="checkbox" id="themeSwitch" name="theme-switch" class="theme-switch__input" />
+  <label for="themeSwitch" class="theme-switch__label">
+    <span></span>
+  </label>
+
+
+
+
+<main>
+  <div class="wrapper">
+ 
+    <h1 style="color: rgb(124, 168, 168);"><center>What are Classes and Objects?</Center></h1>
+  <body>
+    
+ 
+    <br></br>
+
+    <p>Classes and objects are the <b>two main aspects</b> of <u>object-oriented programming</u>.</p>
+   
+    <b>Example:</b>
+
+    <p>Imagine you're building a city. You wouldn't start by laying individual bricks everywhere, right? Instead, you'd first design blueprints for different structures, like houses, apartments, and shops. These blueprints would specify the characteristics and functionalities of each building type.</p>
+    <br></br>
+Define:
+<br></br>
+
+    -  <mark><u>classes</u></mark>: are like those blueprints. They are templates that define the characteristics (data) and functionalities (behavior) of a particular type of object. Think of them as general instructions for creating specific things in your program.
+    <br></br>
+    -  <mark><u>Objects</u></mark>: are individual instances created from those blueprints. Just like you build many houses and apartments based on the same blueprint, you can create many objects from a single class. Each object has its own unique set of data (like the address of a house or the name of a shop) but shares the same functionalities defined in the class (like having doors and windows for a house).
+    <br></br>
+
+   <p left>- Create a class in C#</p>
+
+<p></p>
+<pre>
+  <code>
+    class ClassName {
+
+    }
+  </code>
+</pre>
+
+<p left>Lets the an Example:</p>
+<p></p>
+<pre>
+  <code>
+    class Ahmed {
+ 
+        //field
+        string x;
+       
+        //method
+        public void sleep() {
+      
+        }
+       
+      }
+  </code>
+</pre>
+
+
+<p left>- Creating an Object of a class</p>
+<p></p>
+<pre>
+  <code>
+    ClassName obj = new ClassName();
+  </code>
+</pre>
+
+<p left>Lets the an Example:</p>
+
+<p></p>
+<pre>
+  <code>
+    Ahmed p1 = new Ahmed();
+  </code>
+</pre>
+
+<p left>Lets the an Example:</p>
+
+<p></p>
+<pre>
+  <code>
+    using System;
+
+    namespace ClassObject {
+    
+      class Ahmed {
+        string x;
+    
+        public void sleep() {
+          Console.WriteLine("sleeping !!");
+          
+        }
+    
+        static void Main(string[] args) {
+    
+          // create Ahmed object 
+          Ahmed p1 = new Ahmed();
+    
+          // access x of  the Ahmed 
+          Ahmed.x = "Bull Ahmed";
+          Console.WriteLine(Ahmed.x);
+    
+          // access method of the Ahmed
+          Ahmed.sleep();   
+    
+          Console.ReadLine();
+         
+        }
+      }
+    }
+  </code>
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+  <p></p>
+  </div>
+</main>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>

@@ -1,0 +1,279 @@
+<style>
+  @charset "UTF-8";
+  @import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700");
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Merriweather, serif;
+  }
+  
+  .wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  label,
+  main {
+    color: var(--text, black);
+  }
+  
+  .theme-switch__input:checked ~ main,
+  .theme-switch__input:checked ~ label {
+    --text: white;
+  }
+  
+  main {
+    --gradDark: hsl(144, 100%, 89%);
+    --gradLight: hsl(42, 94%, 76%);
+    background: linear-gradient(to bottom, var(--gradDark), var(--gradLight));
+    padding: 120px 40px 40px 40px;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  .theme-switch__input:checked ~ main {
+    --gradDark: hsl(198, 44%, 11%);
+    --gradLight: hsl(198, 39%, 29%);
+  }
+  
+  .theme-switch__input:checked ~ .theme-switch__label {
+    background-color: lightSlateGray;
+  }
+  
+  .theme-switch__input,
+  .theme-switch__label {
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .theme-switch__input {
+    opacity: 0;
+  }
+  .theme-switch__input:hover + .theme-switch__label, .theme-switch__input:focus + .theme-switch__label {
+    background-color: lightSlateGray;
+  }
+  .theme-switch__input:hover + .theme-switch__label span::after, .theme-switch__input:focus + .theme-switch__label span::after {
+    background-color: #d4ebf2;
+  }
+  
+  .theme-switch__label {
+    padding: 20px;
+    margin: 60px;
+    transition: background-color 200ms ease-in-out;
+    width: 120px;
+    height: 50px;
+    border-radius: 50px;
+    text-align: center;
+    background-color: slateGray;
+    box-shadow: -4px 4px 15px inset rgba(0, 0, 0, 0.4);
+  }
+  .theme-switch__label span {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+  }
+  .theme-switch__label::before, .theme-switch__label::after {
+    font-size: 2rem;
+    position: absolute;
+    transform: translate3d(0, -50%, 0);
+    top: 50%;
+  }
+  .theme-switch__label::before {
+    content: "☼";
+    right: 100%;
+    margin-right: 10px;
+    color: orange;
+  }
+  .theme-switch__label::after {
+    content: "☾";
+    left: 100%;
+    margin-left: 10px;
+    color: lightSlateGray;
+  }
+  
+  .theme-switch__label span::after {
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    content: "";
+    border-radius: 50%;
+    background-color: lightBlue;
+    transition: transform 200ms, background-color 200ms;
+    box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  .theme-switch__input:checked ~ .theme-switch__label span::after {
+    transform: translate3d(70px, 0, 0);
+  }
+  
+  
+  .theme-switch__input:checked ~ .theme-switch__label::before {
+    color: lightSlateGray;
+  }
+  .theme-switch__input:checked ~ .theme-switch__label::after {
+    color: turquoise;
+  }
+  </style>
+  
+  <div class="page">
+      <!--Theme switch-->
+      <input type="checkbox" id="themeSwitch" name="theme-switch" class="theme-switch__input" />
+      <label for="themeSwitch" class="theme-switch__label">
+        <span></span>
+      </label>
+      
+      <!--Main page content-->
+   
+  
+  
+  
+  
+     
+      
+         <style>
+         
+         img {
+          border-style: solid;
+                  text-align: center;
+                  background: rgb(114, 59, 157);
+                  border-radius: 20px;
+             }
+         
+      </style>
+  
+  
+  <style>
+  
+      p {
+          Text-align:left;
+      }
+  
+      pre {
+          Text-align:left;
+      }
+  
+      pre {
+            border-style: solid;
+            border-width: 8x;
+            box-sizing: border-box;
+            
+        }
+  
+  
+  </style>
+  
+  
+  
+      <main>
+        <div class="wrapper">
+          <h1 style="color: rgb(124, 168, 168);;"><center>What is Constructor</center></h1>
+       
+        <body>
+
+          A <mark>constructor </mark> is a <strong>special method</strong> that is used to initialize objects. The advantage of a constructor, is that it is called when an object of a class is created. It can be used to set initial values for fields:
+          <br></br>
+          
+          - has the same name as that of the class
+          <br></br>
+          
+          - does not have any return type
+          <br></br>
+          
+          Types of Constructors:
+          <br></br>
+          
+          - <mark>Default constructor</mark> : it's automatically provided by the compiler if you don't define any other constructors. The default constructor typically initializes all instance variables to their default values .
+          <br></br>
+          
+          - <mark>Parameter constructor</mark>: You can define constructors with parameters to allow you to specify the initial values for the object's properties during creation. This provides more control over the object's initial state.
+          
+          <br></br>
+          <br></br>
+          
+          <h2 left>- create a constructor </h2> 
+          
+          <p></p>
+          <pre>
+            <code>
+              class Car {
+            
+                  // constructor
+                  Car() {
+                    
+                      // here will be written the code
+          
+                  }
+                
+                }
+            </code>
+          </pre>
+          
+          
+         
+          <h2 left>- Lets take a Example of Dafualt constructor: </h2> 
+          <p></p>
+          <pre>
+            <code>
+              // Create a Car class
+              class Car
+              {
+                public string model;  // Create a field
+              
+                // Create a class constructor for the Car class
+                public Car()
+                {
+                  model = "Mustang"; // Set the initial value for model
+                }
+              
+                static void Main(string[] args)
+                {
+                  Car Ford = new Car();  // Create an object of the Car Class (this will call the constructor)
+                  Console.WriteLine(Ford.model);  // Print the value of model
+                }
+              }
+              
+              // Outputs "Mustang"
+            </code>
+          </pre>
+          
+         
+         
+  
+          <br><br>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
